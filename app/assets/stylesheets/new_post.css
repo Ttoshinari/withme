@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body{
+	background:#fffafa
+}
+
+.form_body {
+	width:800px;
+	height:750px;
+	border:solid 4px #b0c4de;
+	border-radius:15px;
+	margin-left:180px;
+	margin-top:60px;
+	padding:30px;
+	text-align:left;
+	background:#fffaf0;
+}
+
+.pulldown_area {
+	overflow: hidden;
+	margin: 2em auto;
+	text-align: center;
+}
+.pulldown_area select {
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.pulldown select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+
+
+
+
+
+#post_content {
+vertical-align:top;
+width: 600px;
+height: 9em;
+line-height: 1.5em;
+margin:15px 30px 0px 0px;
+border:solid 2px gray;
+padding:10px;
+font-size:16px;
+}
+
+#post_title {
+	width:500px;
+	height:2em;
+	line-height:3em;
+	margin-top:30px;
+	border:solid 2px gray;
+	margin-right:25px;
+	padding:5px;
+	font-size:16px;
+}
+
+
+input#post_button {
+    padding: 5px 15px;
+    font-size: 1.2em;
+    background-color: #000;
+    color: #fff;
+    border-style: none;
+    margin-top:20px;
+    float:right;
+    margin-right:185px;
+}
+

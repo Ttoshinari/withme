@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>◎新規投稿◎</title>
+
+</head>
+<body>
+
+<% @details.each do |detail| %>
+
+<h1 class="title"><%= detail.title %></h1>
+
+<br>
+ <%= detail.content %>
+<br>
+地域：
+<%= detail.prefecture.prefecture %>
+<br>
+募集年齢：
+<%= detail.from_age %> ~ <%= detail.to_age %>歳
+<br>
+カテゴリー：
+<%= detail.category.category %>
+<br>
+募集人数：
+<%= detail.accept_number %>人
+<br>
+<%= button_to "メッセージを送る", {controller: 'message', action: 'chatroom'}, {method: :get} %>
+<br>
+<input type="submit" id="follow_button" value="投稿者をフォローする">
+<br>
+投稿者：
+<%= detail.user.name %>
+<br>
+年齢：
+<%= detail.user.age %>歳
+<br>
+<% end %>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  title: MyString
+  content: MyString
+  category_id: 1
+  prefecture_id: 1
+  accept_number: 1
+  from_age: 1
+  to_age: 1
+  view_period: 1
+
+two:
+  user_id: 1
+  title: MyString
+  content: MyString
+  category_id: 1
+  prefecture_id: 1
+  accept_number: 1
+  from_age: 1
+  to_age: 1
+  view_period: 1

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新規投稿</title>
+<link rel="stylesheet" type="text/css" href="AllPost.css?201610261216">
+<script type="text/javascript" src="assets/javascripts/all_post.js"></script>
+</head>
+<body>
+<div id="submenu">
+<div id="submenu_header">キーワードから探す</div>
+<div id="sample">
+
+<form method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc">
+
+<input value="6" type="hidden" name="sv">
+<input value="311213" type="hidden" name="sid"><!--店舗ID-->
+<input value="float" type="hidden" name="su"><!--店舗URL-->
+<input value="時計・雑貨FLOAT" type="hidden" name="sn"><!--店舗名-->
+<input value="A" type="hidden" name="f">
+<input type="text" name="sitem" class="text" placeholder="キーワードを入れてください"><!--検索キーワード-->
+
+<input value="検索" type="submit" class="btn"><!--検索ボタン-->
+
+</form>
+<%= link_to "天！！", controller: "new_posts", action: "new_post" %>
+</div><br>
+
+		<div id="submenu_header">カテゴリーから探す</div>
+		<ul id="submenu_body">
+			<li><a href="xxx.html">CSSの適用</a></li>
+			<li><a href="xxx.html">セレクタ</a></li>
+			<li><a href="xxx.html">フォント</a></li>
+			<li><a href="xxx.html">テキスト</a></li>
+			<li><a href="xxx.html">文字色・背景</a></li>
+			<li><a href="xxx.html">幅・高さ・余白</a></li>
+			<li><a href="xxx.html">ボーダー</a></li>
+			<li><a href="xxx.html">表示・配置</a></li>
+			<li><a href="xxx.html">リスト</a></li>
+			<li><a href="xxx.html">テーブル</a></li>
+			<li><a href="xxx.html">生成内容の挿入</a></li>
+			<li><a href="xxx.html">インターフェース</a></li>
+			<li><a href="xxx.html">フィルタ・ズーム</a></li>
+			<li><a href="xxx.html">テキスト（IE独自）</a></li>
+			<li><a href="xxx.html">印刷</a></li>
+			<li><a href="xxx.html">音声</a></li>
+		</ul>
+		<div id="search_header">地域から探す</div>
+		<div id="search_body">
+			地方<div class="pulldown"><select class="pulldown_area_category">
+<option value="選択肢1">選択肢1</option>
+<option value="選択肢2">選択肢2</option>
+<option value="選択肢3">選択肢3</option>
+</select></div>
+都道府県<div class="pulldown"><select class="pulldown_area_category">
+<option value="選択肢1">選択肢1</option>
+<option value="選択肢2">選択肢2</option>
+<option value="選択肢3">選択肢3</option>
+</select></div>
+<input id="sbtn1" type="submit" value="検索" />
+		</div>
+	</div>
+
+
+<% @posts.each do |post| %>
+<ul class = "onePost">
+<li class="onePost_1">
+
+<%= link_to post.title, controller: "post_details", action: "post_detail", id: post.id %>
+<div id="category">
+		<p class="cate" ><%= post.category.category %></p>
+		</div>
+<div class="a">
+<div class="post_date">投稿日時：<%= post.created_at %></div>
+		<div class="from_area">場所：[<%= post.prefecture.prefecture %>]</div>
+</div>
+		</li>
+
+
+</ul>
+
+<% end %>
+</body>
+</html>

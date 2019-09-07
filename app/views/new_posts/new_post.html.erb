@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>◎新規投稿◎</title>
+ <script type="text/javascript" src="new_post.js"></script>
+<link rel="stylesheet" type="text/css" href="new_post.css?201610261213">
+</head>
+<body>
+<div class="form_body">
+<%= form_for(@posts, url: send_post_path) do |f| %>
+
+
+<div class ="pulldown" id ="area_id">場所：
+<%= f.collection_select :id, Area.all, :id, :area %>
+
+<%= f.collection_select :prefecture_id, Prefecture.all, :id, :prefecture %>
+</div><br>
+<p>Selected: {{ selected }}</p>
+<div class ="pulldown">
+カテゴリ：<%= f.collection_select :category_id, Category.all, :id, :category %>
+</div>
+<br>
+<div class ="pulldown">
+募集人数：<%= f.select :accept_number, options_for_select(1..200) %>
+</div>
+<br>
+<div class ="pulldown">
+募集年齢：<%= f.select :from_age, {"最低年齢を選んでください" => "0", "10歳" => "10", "50歳" => "50"} %>
+     から     <%= f.select :to_age, {"最高年齢を選んでください" => "0", "50歳" => "50", "100歳" => "100"} %>
+     </div>
+<br>
+
+
+
+
+
+
+     <%= f.text_field :title, :placeholder => "20文字以内でタイトルを入力してください" %>
+  <%= f.text_area :content, :maxlength => "300" %>
+  <%= f.submit "投稿する", id: "post_button", name: "post_submit"%>
+
+</div>
+<% end %>
+</body>
+</html>

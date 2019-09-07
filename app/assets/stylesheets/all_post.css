@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+#sample {
+    padding:10px;
+    margin-bottom:10px;
+    width:300px;
+   }
+   #sample .text {
+    width:176px;
+    height:30px;
+    border:5px solid #CCC;
+    border-bottom:6px solid #999999;
+    text-indent:10px;
+   }
+   #sample .btn {
+    height:43px;
+    border:5px solid #CCC;
+    width:50px;
+    margin-left:-9px;
+    margin-top:-1px;
+   }
+
+
+   div#submenu{
+       width:250px;			/*幅の指定*/
+       margin:10px 50px 10px 25px;	/*位置調整（IE6のバグに注意）*/
+       display:inline-block;			/*IE6のマージン算出のバグ対策*/
+       float: left;			/*サブメニューのカラムを左寄せにする*/
+   }
+   /*サブメニューのヘッダ部分（余白調整・背景画像・背景色・文字サイズなど）*/
+   div#submenu_header {
+
+       width:250px;
+       height:26px;
+       padding:4px 0px 0px 0px;
+       background-image:url("images/bg_submenu_header.gif");
+       background-repeat:no-repeat; background-position:top;
+       background-color:white;
+       font-size:90%; font-weight:bold; text-align:left;
+       border-radius:0px;
+       font-size:20px;
+       position: relative;
+     padding: 0.3em;
+   }
+
+   div#submenu_header:after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 7px;
+     background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+   }
+
+   /*サブメニューのボディ部分（余白調整・背景画像・背景色）*/
+   ul#submenu_body {
+       width:250px;
+       padding:15px;
+       background-image:url("images/bg_submenu_footer.gif");
+       background-repeat:no-repeat; background-position:bottom;
+       background-color:#f8f8f8;
+       border:solid 1px #c0c0c0;
+       border-radius: 0px;
+   }
+   ul#submenu_body li {
+       font-size:90%;			/*文字サイズを90%にする*/
+       /*list-style-type:none;		/*リストマーカー無しにする*/
+       display:inline;			/*リスト項目をインライン表示にする*/
+   }
+   ul#submenu_body li a {
+       display:inline-block;			/*リンクをブロック表示にする*/
+       font-family: 'M PLUS Rounded 1c', sans-serif;
+       margin:7px;		/*サブメニュー項目のマージン*/
+       padding:10px;	/*サブメニュー項目のパディング*/
+       background-color:#e6e6fa;	/*サブメニュー項目の背景色*/
+       text-decoration:none;/*リンクの下線を無くす*/
+       border-radius:10px;
+   }
+   ul#submenu_body li a:hover {
+       background-color:#e6e6fa;	/*リンクにマウスが乗ったら色を変える*/
+   }
+
+   ul#submenu_body li a:before {
+       font-family:"Font Awesome 5 Brands";
+    content:url(tagicon4.png);
+    font-weight:400;
+    color:#008db7;
+    padding-right:6px;	/*リンクにマウスが乗ったら色を変える*/
+   }
+
+   .prof_image {
+       float:left;
+   }
+
+   .onePost {
+       width:550px;
+       height:80px;
+       margin:10px 300px 0px 10px;
+       background:#f8f8f8;
+       padding: 10px 10px 30px 10px;
+       border-bottom: solid 1px #999999;
+       float:right;
+   }
+
+   .onePost:hover {
+       background-color:#cccccc;
+       cursor:pointer;
+   }
+
+   .title {
+
+       font-size:15px;
+   }
+
+
+   .post_date {
+       color:gray;
+       font-size:12px;
+       font-weight:bold;
+       float:right;
+   }
+
+
+   .from_area {
+       float:right;
+       color:gray;
+       font-size:12px;
+       margin-right:10px;
+       font-weight:bold;
+   }
+
+
+   .follower {
+       display:inline-block;
+       color:gray;
+       font-size:12px;
+       font-weight:bold;
+   }
+
+   .cate {
+       display:inline-block;			/*リンクをブロック表示にする*/
+       font-size:12px;
+       margin:7px 7px 20px 7px;		/*サブメニュー項目のマージン*/
+       padding:10px;	/*サブメニュー項目のパディング*/
+       background-color:#e6e6fa;	/*サブメニュー項目の背景色*/
+       text-decoration:none;/*リンクの下線を無くす*/
+       border-radius:10px;
+       float:right;
+       color:gray
+   }
+
+   .cate:before {
+       font-family:"Font Awesome 5 Brands";
+    content:url(tagicon4.png);
+    font-weight:400;
+    color:#008db7;
+    padding-right:6px;	/*リンクにマウスが乗ったら色を変える*/
+   }
+
+   div#search_body {
+       float:left;
+       width:250px;
+       height:220px;
+       text-align:left;
+       background-color:#f8f8f8;
+       border:solid 1px #c0c0c0;
+       padding:10px 0 15px 25px;
+       border-radius:0px;
+   }
+
+   #sbtn1 {
+       float:right;
+     display       : inline-block;
+     margin:0 15px 150px 0;
+     border-radius : 12%;          /* 角丸       */
+     font-size     : 14pt;        /* 文字サイズ */
+     text-align    : center;      /* 文字位置   */
+     cursor        : pointer;     /* カーソル   */
+     padding       : 12px 12px;   /* 余白       */
+     background    : #000066;     /* 背景色     */
+     color         : #ffffff;     /* 文字色     */
+     line-height   : 1em;         /* 1行の高さ  */
+     transition    : .3s;         /* なめらか変化 */
+     box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+     border        : 2px solid #999999;    /* 枠の指定 */
+   }
+   #sbtn1:hover {
+     box-shadow    : none;        /* カーソル時の影消去 */
+     color         : #000066;     /* 背景色     */
+     background    : #ffffff;     /* 文字色     */
+   }
+
+   #search_header {
+       width:250px;
+       height:26px;
+       padding:4px 0px 0px 0px;
+       margin:50px 10px 10px 0;
+       background-image:url("images/bg_submenu_header.gif");
+       background-repeat:no-repeat; background-position:top;
+       background-color:white;
+       font-size:90%; font-weight:bold; text-align:left;
+       border-radius:10px;
+       font-size:20px;
+       position: relative;
+     padding: 0.3em;
+   }
+
+   #search_header:after {
+     content: '';
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 7px;
+     background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+   }
+
+
+
+.pulldown_area_category {
+	overflow: hidden;
+	margin:15px;
+	text-align: center;
+}
+.pulldown_area_category select {
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.pulldown select {
+	width:200px;
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+
+
+
+
+
+   .area_name {
+       font-size:14px;
+       font-weight:bold;
+       margin-top:5px;
+       margin-bottom:5px;
+   }
+
+   .onePost_1 {
+
+   height:50px;
+   }
+
+   .a {
+   float:left;
+   margin-top:27px;
+
+   }
+
+   ul {
+   list-style: none;
+   }
