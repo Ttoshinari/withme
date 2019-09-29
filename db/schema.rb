@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_06_084308) do
+ActiveRecord::Schema.define(version: 2019_09_29_035634) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "area"
@@ -39,13 +39,8 @@ ActiveRecord::Schema.define(version: 2019_07_06_084308) do
     t.string "prefecture"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "todofukens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "from_area_id"
-    t.integer "age"
-    t.string "email"
-    t.string "encrypted_password"
-    t.string "reset_password_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
