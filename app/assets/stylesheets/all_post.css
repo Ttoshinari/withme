@@ -1,4 +1,24 @@
 @charset "UTF-8";
+body{
+	background:white
+}
+
+.new_post_btn {
+    display: inline-block;
+    font-size:18px;
+    width:250px;
+    height:70px;
+    margin-left:27px;
+    margin-bottom:20px;
+    margin-top:20px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 8px;
+    
+  }
 
 #sample {
     padding:10px;
@@ -59,7 +79,7 @@
        padding:15px;
        background-image:url("images/bg_submenu_footer.gif");
        background-repeat:no-repeat; background-position:bottom;
-       background-color:#f8f8f8;
+       background-color:#D3DEF1;
        border:solid 1px #c0c0c0;
        border-radius: 0px;
    }
@@ -73,12 +93,12 @@
        font-family: 'M PLUS Rounded 1c', sans-serif;
        margin:7px;		/*サブメニュー項目のマージン*/
        padding:10px;	/*サブメニュー項目のパディング*/
-       background-color:#e6e6fa;	/*サブメニュー項目の背景色*/
+       background-color:#ebb9a0;	/*サブメニュー項目の背景色*/
        text-decoration:none;/*リンクの下線を無くす*/
        border-radius:10px;
    }
    ul#submenu_body li a:hover {
-       background-color:#e6e6fa;	/*リンクにマウスが乗ったら色を変える*/
+       background-color:#ebb9a0;	/*リンクにマウスが乗ったら色を変える*/
    }
 
    ul#submenu_body li a:before {
@@ -97,7 +117,7 @@
        width:550px;
        height:80px;
        margin:10px 300px 0px 10px;
-       background:#f8f8f8;
+       background:#f5f3f2;
        padding: 10px 10px 30px 10px;
        border-bottom: solid 1px #999999;
        float:right;
@@ -143,11 +163,11 @@
        font-size:12px;
        margin:7px 7px 20px 7px;		/*サブメニュー項目のマージン*/
        padding:10px;	/*サブメニュー項目のパディング*/
-       background-color:#e6e6fa;	/*サブメニュー項目の背景色*/
+       background-color:#ebb9a0;	/*サブメニュー項目の背景色*/
        text-decoration:none;/*リンクの下線を無くす*/
        border-radius:10px;
        float:right;
-       color:gray
+       color:#008db7
    }
 
    .cate:before {
@@ -161,9 +181,9 @@
    div#search_body {
        float:left;
        width:250px;
-       height:220px;
+       height:100px;
        text-align:left;
-       background-color:#f8f8f8;
+       background-color:#D3DEF1;
        border:solid 1px #c0c0c0;
        padding:10px 0 15px 25px;
        border-radius:0px;
@@ -174,15 +194,15 @@
      display       : inline-block;
      margin:0 15px 150px 0;
      border-radius : 12%;          /* 角丸       */
-     font-size     : 14pt;        /* 文字サイズ */
+     font-size     : 10pt;        /* 文字サイズ */
      text-align    : center;      /* 文字位置   */
      cursor        : pointer;     /* カーソル   */
      padding       : 12px 12px;   /* 余白       */
      background    : #000066;     /* 背景色     */
      color         : #ffffff;     /* 文字色     */
-     line-height   : 1em;         /* 1行の高さ  */
+     line-height   : 0.5em;         /* 1行の高さ  */
      transition    : .3s;         /* なめらか変化 */
-     box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+     box-shadow    : 3px 3px 1px #666666;  /* 影の設定 */
      border        : 2px solid #999999;    /* 枠の指定 */
    }
    #sbtn1:hover {
