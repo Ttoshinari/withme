@@ -6,35 +6,28 @@
 
 </head>
 <body>
-
 <% @details.each do |detail| %>
+<div class="detail_userinfo">投稿者：<%= detail.user.nickname %>　<%= detail.user.birthday %>歳</div>
 
-<h1 class="title"><%= detail.title %></h1>
-
+<div class="detail_formbody">
+<p class="detail_title"><%= detail.title %></p>
 <br>
- <%= detail.content %>
+<p class="detail_content">本文：<%= detail.content %></p>
 <br>
-地域：
-<%= detail.prefecture.prefecture %>
+<div class="other_detail">
+地域：<%= detail.prefecture.prefecture %>
 <br>
-募集年齢：
-<%= detail.from_age %> ~ <%= detail.to_age %>歳
+募集年齢：<%= detail.from_age %>歳 ~ <%= detail.to_age %>歳
 <br>
-カテゴリー：
-<%= detail.category.category %>
+募集人数：<%= detail.accept_number %>人
 <br>
-募集人数：
-<%= detail.accept_number %>人
+カテゴリー：<%= detail.category.category %>
+</div>
+</div>
 <br>
-<%= button_to "メッセージを送る", {controller: 'message', action: 'chatroom'}, {method: :get} %>
-<br>
-<input type="submit" id="follow_button" value="投稿者をフォローする">
-<br>
-投稿者：
-<%= detail.user.name %>
-<br>
-年齢：
-<%= detail.user.age %>歳
+<div class="detail_button_wrapper">
+<%= button_to "この投稿にコメントする", {controller: 'comments', action: 'new'}, {method: :get, class: "detail_comment_btn"} %>
+</div>
 <br>
 <% end %>
 </body>

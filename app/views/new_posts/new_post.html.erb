@@ -16,7 +16,6 @@
 
 <%= f.collection_select :prefecture_id, Prefecture.all, :id, :prefecture %>
 </div><br>
-<p>Selected: {{ selected }}</p>
 <div class ="pulldown">
 カテゴリ：<%= f.collection_select :category_id, Category.all, :id, :category %>
 </div>
@@ -38,8 +37,9 @@
 
      <%= f.text_field :title, :placeholder => "20文字以内でタイトルを入力してください" %>
   <%= f.text_area :content, :maxlength => "300" %>
+  <div class = "button_wrapper">
   <%= f.submit "投稿する", id: "post_button", name: "post_submit"%>
-
+</div>
 </div>
 <% end %>
 </body>

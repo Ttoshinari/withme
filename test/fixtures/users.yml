@@ -1,11 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  email: MyString
   name: MyString
-  from_area_id: 1
-  age: 1
+  nickname: MyString
+  birthday: 2019-10-06
+  prefecture: 1
 
 two:
+  email: MyString
   name: MyString
-  from_area_id: 1
-  age: 1
+  nickname: MyString
+  birthday: 2019-10-06
+  prefecture: 1

@@ -8,8 +8,5 @@ class AllPostsController < ApplicationController
         @categories = Category.all
     end
 
-    def show
-        @posts = Post.joins(:prefecture, :category).where(id: params[:prefecture_id]).select("posts.*, prefectures.prefecture, categories.category")
-    end
     
 end
