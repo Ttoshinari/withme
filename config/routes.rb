@@ -7,6 +7,4 @@ Rails.application.routes.draw do
   get 'new_post', to: 'new_posts#new_post'
   get 'post_detail', to: 'post_details#post_detail'
   post 'send_post', to: 'new_posts#send_post'
-  get 'comment', to: 'comments#new'
-  
 end
