@@ -17,9 +17,15 @@ class AllPostsController < ApplicationController
 
 
     def search_category
+        @posts = Post.joins(:prefecture, :category).where(category_id: params[:category_id]).select("posts.*, prefectures.prefecture, categories.category")
+        @categories = Category.all
+        render 'all_post'
     end
 
     def search_word
+        @posts = Post.joins(:prefecture, :category).where(prefecture_id: params[:prefecture_id]).select("posts.*, prefectures.prefecture, categories.category")
+        @categories = Category.all
+        render 'all_post'
     end
     
 end

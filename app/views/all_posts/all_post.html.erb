@@ -22,7 +22,7 @@
 		<div id="submenu_header">カテゴリーから探す</div>
 		<ul id="submenu_body">
 		<% @categories.each do |category| %>
-			<li><a href="xxx.html"><%= category.category %></a></li>
+			<%= link_to category.category, search_cate_path(:category_id => category.id) %>
 			<% end %>
 		</ul>
 		<div id="search_header">都道府県から探す</div>

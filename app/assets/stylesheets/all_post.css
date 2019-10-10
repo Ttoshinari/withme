@@ -88,7 +88,7 @@ body{
        /*list-style-type:none;		/*リストマーカー無しにする*/
        display:inline;			/*リスト項目をインライン表示にする*/
    }
-   ul#submenu_body li a {
+   ul#submenu_body a {
        display:inline-block;			/*リンクをブロック表示にする*/
        font-family: 'M PLUS Rounded 1c', sans-serif;
        margin:7px;		/*サブメニュー項目のマージン*/
