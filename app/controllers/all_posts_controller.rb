@@ -4,7 +4,7 @@ class AllPostsController < ApplicationController
 
 
 
-        @posts = Post.joins(:prefecture, :category).select("posts.*, prefectures.prefecture, categories.category")
+        @posts = Post.joins(:prefecture, :category).select("posts.*, prefectures.prefecture, categories.category").order(id: :desc)
         @categories = Category.all
     end
     
