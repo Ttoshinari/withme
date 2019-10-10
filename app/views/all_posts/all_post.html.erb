@@ -27,15 +27,15 @@
 		</ul>
 		<div id="search_header">都道府県から探す</div>
 		<div id="search_body">
-			
-<div class="pulldown"><select class="pulldown_area_category">
-<option value="選択肢1">選択肢1</option>
-<option value="選択肢2">選択肢2</option>
-<option value="選択肢3">選択肢3</option>
-</select></div>
+
+<%= form_tag(search_pref_path, method: "get") do %>			
+<div class="pulldown">
+<%= select_tag :prefecture_id, options_from_collection_for_select(Prefecture.all, :id, :prefecture) %>
+</div>
 <input id="sbtn1" type="submit" value="検索" />
 		</div>
 	</div>
+	<% end %>
 
 
 <% @posts.each do |post| %>
