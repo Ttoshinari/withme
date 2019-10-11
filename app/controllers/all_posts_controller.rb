@@ -23,7 +23,7 @@ class AllPostsController < ApplicationController
     end
 
     def search_word
-        @posts = Post.joins(:prefecture, :category).where(prefecture_id: params[:prefecture_id]).select("posts.*, prefectures.prefecture, categories.category")
+        @posts = Post.search_w(params[:sitem])
         @categories = Category.all
         render 'all_post'
     end

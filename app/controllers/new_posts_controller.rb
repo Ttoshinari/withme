@@ -12,11 +12,18 @@ class NewPostsController < ApplicationController
 
     def send_post
 
+
         @Post = Post.new(post_params)
 
-        @Post.save!
+        if @Post.save
+            redirect_to root_path 
+        else
+            @error_message = 'タイトル、本文は入力してください!'
+            redirect_to new_post_path
+        end
+        
 
-        redirect_to root_path
+        
     end
 private
 

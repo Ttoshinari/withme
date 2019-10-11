@@ -11,12 +11,10 @@
 <div id="submenu_header">キーワードから探す</div>
 <div id="sample">
 
-<form method="get" action="http://esearch.rakuten.co.jp/rms/sd/esearch/vc">
+<%= form_tag(search_word_path,:method => 'get') do %>
 <input type="text" name="sitem" class="text" placeholder="キーワードを入れてください"><!--検索キーワード-->
-
 <input value="検索" type="submit" class="btn"><!--検索ボタン-->
-
-</form>
+<% end %>
 </div><br>
 
 		<div id="submenu_header">カテゴリーから探す</div>
