@@ -12,14 +12,15 @@ class NewPostsController < ApplicationController
 
     def send_post
 
+        @posts = Post.new(post_params)
+        
 
-        @Post = Post.new(post_params)
-
-        if @Post.save
+        if @posts.save
             redirect_to root_path 
         else
-            @error_message = 'タイトル、本文は入力してください!'
-            redirect_to new_post_path
+            @posts.errors.full_messages
+            render :new_post
+
         end
         
 
@@ -32,7 +33,6 @@ private
 
         params.require(:post).permit(:prefecture_id, :category_id, :title, :content, :accept_number, :from_age, :to_age)
 
-        
     end
 
 

@@ -7,9 +7,19 @@
 <link rel="stylesheet" type="text/css" href="new_post.css?201610261213">
 </head>
 <body>
+<% if @posts.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @posts.errors.count %>件のエラーがあります。</h2>
+ 
+    <ul>
+    <% @posts.errors.full_messages.each do |msg| %>
+      <li>・<%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 <div class="form_body">
 <%= form_for(@posts, url: send_post_path) do |f| %>
-
 
 <div class ="pulldown" id ="area_id">場所：
 

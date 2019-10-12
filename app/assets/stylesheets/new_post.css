@@ -80,3 +80,21 @@ input#post_button {
 .button_wrapper{
 	text-align:center;
  }
+
+ #error_explanation{
+	 background: orange;
+	 border:4px solid red;
+	 text-align:center;
+ }
+
+ #error_explanation h2{
+	background: red;
+	color:white;
+	border:4px solid red;
+	text-align:center;
+}
+
+#error_explanation li{
+	font-weight:bold;
+	text-align:center;
+}

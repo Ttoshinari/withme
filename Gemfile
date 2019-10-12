@@ -66,3 +66,5 @@ end
 gem 'webpacker', '~> 4.x'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+gem 'rails-i18n', '~> 5.1'
