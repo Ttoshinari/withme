@@ -11,16 +11,14 @@ class NewPostsController < ApplicationController
 
 
     def send_post
-
+require 'pry'
         @posts = Post.new(post_params)
-        
-
         if @posts.save
             redirect_to root_path 
         else
             @posts.errors.full_messages
             render :new_post
-
+binding.pry
         end
         
 

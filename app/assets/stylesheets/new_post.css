@@ -4,11 +4,11 @@ body{
 }
 
 .form_body {
-	width:800px;
-	height:650px;
+	width:1000px;
+	height:800px;
 	border:solid 4px #b0c4de;
 	border-radius:70px;
-	margin-left:180px;
+	margin-left:20px;
 	margin-top:60px;
 	padding:30px 30px 30px 100px;
 	text-align:left;
