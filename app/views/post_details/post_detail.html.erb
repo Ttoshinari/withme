@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>◎新規投稿◎</title>
+
+</head>
+<body>
+<% @details.each do |detail| %>
+<div class="detail_userinfo">投稿者：<%= detail.user.nickname %>　<%= detail.user.birthday %>歳</div>
+
+<div class="detail_formbody">
+<p class="detail_title"><%= detail.title %></p>
+<br>
+<p class="detail_content">本文：<%= detail.content %></p>
+<br>
+<div class="other_detail">
+地域：<%= detail.prefecture.prefecture %>
+<br>
+募集年齢：<%= detail.from_age %>歳 ~ <%= detail.to_age %>歳
+<br>
+募集人数：<%= detail.accept_number %>人
+<br>
+カテゴリー：<%= detail.category.category %>
+</div>
+</div>
+<br>
+<div class="detail_button_wrapper">
+<%= button_to "この投稿にコメントする", {controller: 'comments', action: 'new'}, {method: :get, class: "detail_comment_btn"} %>
+</div>
+<br>
+<% end %>
+</body>
+</html>
