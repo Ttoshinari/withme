@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新規投稿</title>
+<link rel="stylesheet" type="text/css" href="AllPost.css?201610261216">
+</head>
+<body>
+<%= button_to "新しく投稿する",{controller: "new_posts", action: "new_post"}, {method: :get, class: "new_post_btn"} %>
+<div id="submenu">
+<div id="submenu_header">キーワードから探す</div>
+<div id="sample">
+
+<%= form_tag(search_word_path,:method => 'get') do %>
+<input type="text" name="sitem" class="text" placeholder="キーワードを入れてください"><!--検索キーワード-->
+<input value="検索" type="submit" class="btn"><!--検索ボタン-->
+<% end %>
+</div><br>
+
+		<div id="submenu_header">カテゴリーから探す</div>
+		<ul id="submenu_body">
+		<% @categories.each do |category| %>
+			<%= link_to category.category, search_cate_path(:category_id => category.id) %>
+			<% end %>
+		</ul>
+		<div id="search_header">都道府県から探す</div>
+		<div id="search_body">
+
+<%= form_tag(search_pref_path, method: "get") do %>			
+<div class="pulldown">
+<%= select_tag :prefecture_id, options_from_collection_for_select(Prefecture.all, :id, :prefecture) %>
+</div>
+<input id="sbtn1" type="submit" value="検索" />
+		</div>
+	</div>
+	<% end %>
+
+
+<% @posts.each do |post| %>
+<ul class = "onePost">
+<li class="onePost_1">
+
+<%= link_to post.title, controller: "post_details", action: "post_detail", id: post.id %>
+<div id="category">
+		<p class="cate" ><%= post.category.category %></p>
+		</div>
+<div class="a">
+<div class="post_date">投稿日時：<%= post.created_at %></div>
+		<div class="from_area">場所：[<%= post.prefecture.prefecture %>]</div>
+</div>
+		</li>
+
+
+</ul>
+
+<% end %>
+</body>
+</html>
