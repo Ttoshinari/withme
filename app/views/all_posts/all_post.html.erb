@@ -44,7 +44,7 @@
 		<p class="cate" ><%= post.category.category %></p>
 		</div>
 <div class="a">
-<div class="post_date">投稿日時：<%= post.created_at %></div>
+<div class="post_date">投稿日時：<%= simple_time(post.created_at) %></div>
 		<div class="from_area">場所：[<%= post.prefecture.prefecture %>]</div>
 </div>
 		</li>
