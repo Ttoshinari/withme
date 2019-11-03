@@ -7,12 +7,12 @@
 </head>
 <body>
 <% @details.each do |detail| %>
-<div class="detail_userinfo">投稿者：<%= detail.user.nickname %>　<%= detail.user.birthday %>歳</div>
+<div class="detail_userinfo">投稿者：<%= detail.user.nickname %></div>
 
 <div class="detail_formbody">
-<p class="detail_title"><%= detail.title %></p>
+<p class="detail_title"><span class="sub">タイトル：</span><%= detail.title %></p>
 <br>
-<p class="detail_content">本文：<%= detail.content %></p>
+<p class="detail_content"><span class="sub">本文：</span><%= detail.content %></p>
 <br>
 <div class="other_detail">
 地域：<%= detail.prefecture.prefecture %>
@@ -26,7 +26,7 @@
 </div>
 <br>
 <div class="detail_button_wrapper">
-<%= button_to "この投稿にコメントする", {controller: 'comments', action: 'new'}, {method: :get, class: "detail_comment_btn"} %>
+<%= button_to "この投稿にコメントする"%>
 </div>
 <br>
 <% end %>

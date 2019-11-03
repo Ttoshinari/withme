@@ -3,22 +3,18 @@ class NewPostsController < ApplicationController
     def new_post
 
         @posts = Post.new
-        @areas = Area.new
-        @prefectures = Prefecture.all
 
 
     end
 
 
     def send_post
-require 'pry'
         @posts = Post.new(post_params)
         if @posts.save
             redirect_to root_path 
         else
             @posts.errors.full_messages
             render :new_post
-binding.pry
         end
         
 
