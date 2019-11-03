@@ -79,7 +79,8 @@ header{
 	font-size: 11px;
     background-color: #EEEEEF;
     color: #9E9E9F;
-    padding: 10px;
+	padding: 10px;
+	margin-top:40px;
     
 }
 footer ul{
@@ -100,3 +101,40 @@ footer a{
     text-align: center;
 }
 
+.mypage-body {
+	width:1000px;
+	height:300px;
+	border:solid 4px #b0c4de;
+	border-radius:70px;
+	margin:20px auto;
+	padding:10px 30px 30px 100px;
+	text-align:left;
+	background:#D3DEF1;
+}
+
+.mypage-button{
+	color: #FFF;
+	font-weight:600;
+	text-decoration:none;
+}
+
+.post-info{
+	display: inline;
+}
+
+.title-label{
+	color:gray;
+}
+
+span{
+	color:gray;
+}
+
+.one-post{
+	display: inline-block;
+	width:1000px;
+}
+
+.all-post{
+	margin-bottom:200px;
+}
