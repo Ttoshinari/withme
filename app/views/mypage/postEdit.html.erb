@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>◎新規投稿◎</title>
- <script type="text/javascript" src="new_post.js"></script>
 <link rel="stylesheet" type="text/scss" href="/app/assets/stylesheets/postEdit.scss">
 </head>
 <body>
@@ -19,7 +18,7 @@
   </div>
 <% end %>
 <div class="form_body">
-<%= form_for(@posts, url: new_posts_update_path) do |f| %>
+<%= form_for(@posts, url: mypage_update_path) do |f| %>
 
 <div class ="pulldown" id ="area_id">場所：
 
@@ -49,6 +48,9 @@
 
      <%= f.text_field :title, :placeholder => "タイトルを20文字以内で入力してください", :maxlength => "20" %>
   <%= f.text_area :content, :placeholder => "本文を300文字以内で入力してください", :maxlength => "200" %>
+  <%= f.hidden_field :created_at %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :id %>
   <div class = "button_wrapper">
   <%= f.submit "更新する", id: "post_button", name: "post_submit"%>
 </div>

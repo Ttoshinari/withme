@@ -16,7 +16,7 @@ header{
 	line-height:30px;
 }
 .share-header{
-	background:#3BB300;
+	background:#0000aa;
 }
 .h-component{
 	font-size: 10px;
@@ -80,7 +80,7 @@ header{
     background-color: #EEEEEF;
     color: #9E9E9F;
 	padding: 10px;
-	margin-top:40px;
+	margin-top:200px;
     
 }
 footer ul{
@@ -117,6 +117,7 @@ footer a{
 	font-weight:600;
 	text-decoration:none;
 }
+//ここまでヘッターとフッターのレイアウト
 
 .post-info{
 	display: inline;
@@ -128,10 +129,6 @@ footer a{
 
 span{
 	color:gray;
-}
-
-.all-post{
-	margin-bottom:200px;
 }
 
 .profile-edit-btn {
@@ -152,4 +149,14 @@ span{
 	padding:5px;
 	margin:10px;
 	border:solid 1px gray;
+}
+
+.title {
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.all-post{
+	margin-bottom:200px;
 }
