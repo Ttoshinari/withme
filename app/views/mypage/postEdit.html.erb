@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>◎新規投稿◎</title>
+<link rel="stylesheet" type="text/scss" href="/app/assets/stylesheets/postEdit.scss">
+</head>
+<body>
+<% if @posts.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @posts.errors.count %>件のエラーがあります。</h2>
+ 
+    <ul>
+    <% @posts.errors.full_messages.each do |msg| %>
+      <li>・<%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="form_body">
+<%= form_for(@posts, url: mypage_update_path) do |f| %>
+
+<div class ="pulldown" id ="area_id">場所：
+
+<%= f.collection_select :prefecture_id, Prefecture.all, :id, :prefecture %>
+</div><br>
+<div class ="pulldown">
+カテゴリ：<%= f.collection_select :category_id, Category.all, :id, :category %>
+</div>
+<br>
+<div class ="pulldown">
+募集人数：<%= f.select :accept_number, options_for_select(1..200) %>
+</div>
+<br>
+<div class ="pulldown">
+募集最低年齢：<%= f.select :from_age, {"最低年齢を選んでください" => "", "20歳" => "20", "25歳" => "25", "30歳" => "30", "35歳" => "35", "40歳" => "40", "45歳" => "45", "50歳" => "50", "55歳" => "55", "60歳" => "60"} %>
+    </div>
+    <br>
+    <div class ="pulldown">
+募集最高年齢：<%= f.select :to_age, {"最高年齢を選んでください" => "", "20歳" => "20", "25歳" => "25", "30歳" => "30", "35歳" => "35", "40歳" => "40", "45歳" => "45", "50歳" => "50", "55歳" => "55", "60歳" => "60"} %>
+     </div>
+<br>
+
+
+
+
+
+
+     <%= f.text_field :title, :placeholder => "タイトルを20文字以内で入力してください", :maxlength => "20" %>
+  <%= f.text_area :content, :placeholder => "本文を300文字以内で入力してください", :maxlength => "200" %>
+  <%= f.hidden_field :created_at %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :id %>
+  <div class = "button_wrapper">
+  <%= f.submit "更新する", id: "post_button", name: "post_submit"%>
+</div>
+</div>
+<% end %>
+</body>
+</html>

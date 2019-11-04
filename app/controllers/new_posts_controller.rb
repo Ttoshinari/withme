@@ -24,7 +24,6 @@ private
 
 
     def post_params
-
         params.require(:post).permit(:prefecture_id, :category_id, :title, :content, :accept_number, :from_age, :to_age)
 
     end

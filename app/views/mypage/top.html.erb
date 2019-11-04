@@ -9,8 +9,10 @@
 						<a class="click-link-black" href="">00000000件 5/18日更新 地元の掲示板 Suchmos</a>
 					</div>
 					<div class="h-a-flex">
-						<a class="begnner" href="">初めての方へ</a> <a class="login-button"
+						<%= link_to("ホームへ", { controller: "all_posts", action: "all_post"}, {method: :get, class: "begnner"}) %> 
+						<a class="login-button"
 							rel="nofollow" href="">ログイン</a>
+							<%= link_to("マイページ", { controller: "mypage", action: "top", id: 1 }, class: "mypage-button") %>
 						<div class="h-regist-button">
 							<a class="r-buttom" rel="nofollow" href="">会員登録</a>
 						</div>
@@ -19,10 +21,29 @@
 			</div>
 		</div>
 	</header>
-
-<h3>高木寿成</h3>
-<a href="http://localhost:3000/mypage/edit">プロフィールを編集</a>
-<h3>投稿</h3>
+	<% @users.each do |user| %>
+<div class="mypage-body">
+<label></label>
+<h3 class="user-info">ユーザーネーム：<%= user.nickname %></h3>
+<h3 class="user-info">メールアドレス：<%= user.email %></h3>
+<h3 class="user-info">誕生日：<%= user.birthday %></h3>
+<h3 class="user-info">都道府県：<%= user.prefecture_id %></h3>
+<h3 class="user-info">更新日時：<%= simple_time(user.updated_at) %></h3>
+<h3 class="user-info">投稿数： <%= @postNumber %></h3>
+<%= button_to "プロフィールを編集する",{controller: "mypage", action: "edit", id: 1}, {method: :get, class: "profile-edit-btn"} %>
+</div>
+<% end %>
+<h1>★今までの投稿</h1>
+<div class="all-post">
+<% @posts.each do |post| %>
+<div class="one-post">
+<h3 class="post-info"><span cless="title-label">■タイトル : </span><%= post.title %></h3>
+<h3 class="post-info"><span class="update-label">■更新日時 : </span><%= simple_time(post.updated_at) %></h3>
+<%= link_to("編集", { controller: "mypage", action: "postEdit", postId: post.id, userId: 1 }, {method: :get, class: "delete-button"}) %>
+<%= link_to("削除", { controller: "mypage", action: "delete", postId: post.id, userId: 1 }, {method: :delete, class: "edit-button"}) %>
+</div>
+<% end %>
+</div>
 <footer>
 		<ul>
 			<li>

@@ -3,8 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>新規投稿</title>
+<link rel="stylesheet" type="text/scss" href="/app/assets/stylesheets/all_posts.scss">
 </head>
 <body>
+<header>
+		<div class="share-header">
+			<div class="h-contents">
+				<div class="h-component">
+					<div class="h-component-h1">地元の掲示板 Suchmos</div>
+				</div>
+				<div class="h-flex-component">
+					<div class="number-of-data">
+						<a class="click-link-black" href="">00000000件 5/18日更新 地元の掲示板 Suchmos</a>
+					</div>
+					<div class="h-a-flex">
+						<%= link_to("ホームへ", { controller: "all_posts", action: "all_post"}, {method: :get, class: "begnner"}) %> 
+						<a class="login-button"
+							rel="nofollow" href="">ログイン</a>
+							<%= link_to("マイページ", { controller: "mypage", action: "top", id: 1 }, class: "mypage-button") %>
+						<div class="h-regist-button">
+							<a class="r-buttom" rel="nofollow" href="">会員登録</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 <%= button_to "新しく投稿する",{controller: "new_posts", action: "new_post"}, {method: :get, class: "new_post_btn"} %>
 <div id="submenu">
 <div id="submenu_header">キーワードから探す</div>
@@ -33,8 +57,6 @@
 		</div>
 	</div>
 	<% end %>
-
-
 <% @posts.each do |post| %>
 <ul class = "onePost">
 <li class="onePost_1">
@@ -44,14 +66,12 @@
 		<p class="cate" ><%= post.category.category %></p>
 		</div>
 <div class="a">
-<div class="post_date">投稿日時：<%= post.created_at %></div>
+<div class="post_date">投稿日時：<%= simple_time(post.created_at) %></div>
 		<div class="from_area">場所：[<%= post.prefecture.prefecture %>]</div>
 </div>
 		</li>
-
-
 </ul>
-
 <% end %>
+
 </body>
 </html>

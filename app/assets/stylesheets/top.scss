@@ -16,7 +16,7 @@ header{
 	line-height:30px;
 }
 .share-header{
-	background:#3BB300;
+	background:#0000aa;
 }
 .h-component{
 	font-size: 10px;
@@ -79,7 +79,8 @@ header{
 	font-size: 11px;
     background-color: #EEEEEF;
     color: #9E9E9F;
-    padding: 10px;
+	padding: 10px;
+	margin-top:200px;
     
 }
 footer ul{
@@ -100,3 +101,62 @@ footer a{
     text-align: center;
 }
 
+.mypage-body {
+	width:1000px;
+	height:380px;
+	border:solid 4px #b0c4de;
+	border-radius:70px;
+	margin:20px auto;
+	padding:10px 30px 30px 100px;
+	text-align:left;
+	background:#D3DEF1;
+}
+
+.mypage-button{
+	color: #FFF;
+	font-weight:600;
+	text-decoration:none;
+}
+//ここまでヘッターとフッターのレイアウト
+
+.post-info{
+	display: inline;
+}
+
+.title-label{
+	color:gray;
+}
+
+span{
+	color:gray;
+}
+
+.profile-edit-btn {
+	font-size:15px;
+    width:200px;
+    height:50px;
+    margin-left:27px;
+    margin-bottom:20px;
+    margin-top:20px;
+    padding: 0.5em 1em;
+	cursor: pointer;
+	float:right;
+}
+
+.one-post {
+	height:40px;
+	width:100%;
+	padding:5px;
+	margin:10px;
+	border:solid 1px gray;
+}
+
+.title {
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.all-post{
+	margin-bottom:200px;
+}
