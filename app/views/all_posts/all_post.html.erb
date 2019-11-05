@@ -18,11 +18,14 @@
 					</div>
 					<div class="h-a-flex">
 						<%= link_to("ホームへ", { controller: "all_posts", action: "all_post"}, {method: :get, class: "begnner"}) %> 
-						<a class="login-button"
-							rel="nofollow" href="">ログイン</a>
-							<%= link_to("マイページ", { controller: "mypage", action: "top", id: 1 }, class: "mypage-button") %>
+						<%if user_signed_in? %>
+							<%= link_to "ログアウト", users_sign_out_path, method: :delete, class: "session_btn" %>
+						<% else %>
+							<%= link_to "ログイン", user_session_path, class: "session_btn" %>
+						<% end %>
+							<%= link_to("マイページ", { controller: "mypage", action: "top", id: 1 }, class: "mypage-button") %> 
 						<div class="h-regist-button">
-							<a class="r-buttom" rel="nofollow" href="">会員登録</a>
+							<%= link_to "新規登録", new_user_session_path, class: "r-button" %>
 						</div>
 					</div>
 				</div>
