@@ -11,6 +11,11 @@ header{
 	width: 100%;
 	height: 30px;
 }
+.session_btn {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+}
 .h-contents{
 	height:30px;
 	line-height:30px;
@@ -63,13 +68,13 @@ header{
  	background:#FFF;
 	margin-left:5px;
  }
- .r-buttom{
- 	font-weight:600;
- 	color:#F58123;
- 	text-decoration:none;
- 	margin-top:3px;
- 	padding:16px;
- }
+ .r-button{
+	font-weight:600;
+	color:#F58123;
+	text-decoration:none;
+	margin-top:3px;
+	padding:16px;
+}
 //ここからfooter
  footer{
 	position: fixed;

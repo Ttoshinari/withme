@@ -1,3 +1,18 @@
-// Place all the styles related to the mypage controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.mypage_edit_h3{
+    text-align: center;
+    font-weight: 1000px;
+}
+.mypege_edit{
+    padding:30px 500px;
+}
+
+.mypege_edit dl dt {
+    width: 165px;
+    padding:10px 0;
+    float:left;
+    clear:both;
+}
+
+.mypege_edit dd {
+    padding:10px 0;
+}
