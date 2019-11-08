@@ -4,7 +4,7 @@ class PostDetailsController < ApplicationController
 
 
 
-        @details = Post.joins(:user, :category, :prefecture).where(id: params[:id]).select("posts.*, categories.*, prefectures.*, users.*")
+        @details = Post.joins(:category, :prefecture).where(id: params[:id]).select("posts.*, categories.*, prefectures.*")
 
     end
     
