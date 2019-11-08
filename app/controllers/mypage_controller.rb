@@ -1,13 +1,16 @@
 class MypageController < ApplicationController
+  before_action :authenticate_user!
   def top
-    @users = User.where(id: params[:id]).select("users.*")
-    @posts = Post.where(user_id: params[:id]).select("posts.*")
-    @postNumber = Post.where(user_id: params[:id]).count
+    @users = User.where(id: current_user.id).select("users.*")
+    @posts = Post.where(user_id: current_user.id).select("posts.*")
+    @postNumber = Post.where(user_id: current_user.id).count
 
   end
 
   def edit
-    @users = User.where(id: params[:id]).select("users.*")
+    require 'pry'
+    @users = User.where(id: current_user.id).select("users.*")
+    binding.pry
   end
 
   def delete
@@ -15,9 +18,9 @@ class MypageController < ApplicationController
     @post = Post.find(params[:postId])
     @post.destroy
 
-    @users = User.where(id: params[:userId]).select("users.*")
-    @posts = Post.where(user_id: params[:userId]).select("posts.*")
-    @postNumber = Post.where(user_id: params[:userId]).count
+    @users = User.where(id: current_user.id).select("users.*")
+    @posts = Post.where(user_id: current_user.id).select("posts.*")
+    @postNumber = Post.where(user_id: current_user.id).count
     render :top
 
   end

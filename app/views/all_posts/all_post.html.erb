@@ -23,7 +23,7 @@
 						<% else %>
 							<%= link_to "ログイン", user_session_path, class: "session_btn" %>
 						<% end %>
-							<%= link_to("マイページ", { controller: "mypage", action: "top", id: 1 }, class: "mypage-button") %> 
+							<%= link_to("マイページ", { controller: "mypage", action: "top"}, class: "mypage-button") %> 
 						<div class="h-regist-button">
 							<%= link_to "新規登録", new_user_session_path, class: "r-button" %>
 						</div>

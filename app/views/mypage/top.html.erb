@@ -30,7 +30,7 @@
 <h3 class="user-info">都道府県：<%= user.prefecture_id %></h3>
 <h3 class="user-info">更新日時：<%= simple_time(user.updated_at) %></h3>
 <h3 class="user-info">投稿数： <%= @postNumber %></h3>
-<%= button_to "プロフィールを編集する",{controller: "mypage", action: "edit", id: 1}, {method: :get, class: "profile-edit-btn"} %>
+<%= button_to "プロフィールを編集する",{controller: "mypage", action: "edit"}, {method: :get, class: "profile-edit-btn"} %>
 </div>
 <% end %>
 <h1>★今までの投稿</h1>
@@ -39,8 +39,8 @@
 <div class="one-post">
 <h3 class="post-info"><span cless="title-label">■タイトル : </span><%= post.title %></h3>
 <h3 class="post-info"><span class="update-label">■更新日時 : </span><%= simple_time(post.updated_at) %></h3>
-<%= link_to("編集", { controller: "mypage", action: "postEdit", postId: post.id, userId: 1 }, {method: :get, class: "delete-button"}) %>
-<%= link_to("削除", { controller: "mypage", action: "delete", postId: post.id, userId: 1 }, {method: :delete, class: "edit-button"}) %>
+<%= link_to("編集", { controller: "mypage", action: "postEdit", postId: post.id}, {method: :get, class: "delete-button"}) %>
+<%= link_to("削除", { controller: "mypage", action: "delete", postId: post.id}, {method: :delete, class: "edit-button"}) %>
 </div>
 <% end %>
 </div>
